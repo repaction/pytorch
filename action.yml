@@ -1,0 +1,15 @@
+name: PyTroch Action
+description: To train a deep model with PyTroch.
+author: Fei Qi
+branding:
+  icon: 'printer'
+  color: 'blue'
+inputs:
+  script:
+    description: The python script to run.
+    required: true
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.script }}
